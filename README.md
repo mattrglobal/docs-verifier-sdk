@@ -32,7 +32,7 @@ dependencies will be autolinked.
 Install the peer dependencies:
 
 ```
-yarn add @mattrglobal/react-native-cryptography@^0.4.0 react-native-securerandom@^1.0.0 react-native-fs@^2.20.0 react-native-secure-key-store@^2.0.9 react-native-get-random-values@^1.8.0 react-native-mmkv@^2.4.1 react-native-bignumber@^0.1.7
+yarn add @mattrglobal/react-native-cryptography@^1.0.0 react-native-securerandom@^1.0.0 react-native-fs@^2.20.0 react-native-secure-key-store@^2.0.10 react-native-get-random-values@^1.8.0 react-native-mmkv@^2.5.1
 ```
 
 # Usage
@@ -159,16 +159,3 @@ try {
 ## Licensing
 
 See [here](https://learn.mattr.global/docs/terms/verifier-sdk-licence-agreement) for licence information
-
-## Known issues
-
-### Build error: `"ld: symbol(s) not found for architecture x86_64"`
-
-This error can arise when using `flipper` and `react-native-bignumber` together. Disabling flipper is the only solution
-ATM. See [here](https://github.com/margelo/react-native-bignumber/issues/41)
-
-### Build error: `"Plugin with id 'maven' not found."`
-
-Currently, [react-native-securerandom](https://github.com/robhogan/react-native-securerandom) is not compatible with
-gradle 7+ ([see issue](https://github.com/robhogan/react-native-securerandom/issues/36)) and will not build for android
-without downgrading gradle to 6.9 or below.
